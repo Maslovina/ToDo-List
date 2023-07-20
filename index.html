@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">ToDo List</h1>
+    </header>
+    <main>
+        <div class="toDo_wrapper">
+            <form class="input_bar">
+                <input class="main_input" type="text" placeholder="Сделать удаление завершенных и всех">
+                <button class="add-Btn" type="submit">Добавить</button>
+            </form>
+            <div class="active">
+
+                <ul class="task_list">
+
+                    <!-- <li class="task_wrapper">
+                        <input class="checkbox" type="checkbox">
+                        <p class="task_title done"></p>
+                        <button class="del_task">❌</button>
+                    </li> -->
+
+                </ul>
+
+                <div class="task_footer">
+                    <button class="del_checked">Удалить завершенные</button>
+                    <button class="del_all">Удалить все</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

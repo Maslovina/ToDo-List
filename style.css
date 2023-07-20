@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: #F5F5F5;
+}
+header {
+    text-align: center;
+}
+.main-title {
+    font-size: 58px;
+    font-weight: 700;
+    margin-top: 80px;
+}
+
+/* обертка тудушника */
+
+.toDo_wrapper {
+    margin: 33px auto 0;
+    width: 594px;
+
+}
+
+
+/* оформление инпут бара */
+.input_bar {
+    display: flex;
+    width: 594px;
+    height: 87px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.main_input {
+    width: 356px;
+    height: 38px;
+    padding-left: 13.56px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #CED4DA;
+    background: #FFF;  
+    margin-right: 24px;  
+}
+
+.add-Btn {
+    width: 166px;
+    height: 39px;
+    border-radius: 4px;
+    background: #272829;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    align-items: center;
+}
+
+.addBtn:hover {
+    background: #058229;
+    transition: 250ms;
+}
+
+/* стили листа */
+.active {
+    margin: 0 auto;
+}
+.task_list {
+    background: #fff;
+    width: 594px;
+}
+.task_list li:first-child{
+    padding-top: 32px;
+}
+.task_list li:last-child{
+    padding-bottom: 32px;
+    margin-bottom: 0;
+}
+.task_wrapper {
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.checkbox {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+}
+.checkbox:checked{
+    border-radius: 2px;
+    background: #7749f8;
+}
+.task_title {
+    display: block;
+}
+.done_title {
+    text-decoration: line-through;
+}
+
+.del_task {
+    display: block;
+    margin-left: auto;
+    font-size: 16px;
+    /* border: none; */
+    /* background: transparent; */
+}
+
+/* футер листа с кнопками */
+
+.active {
+    display: none;
+}
+.task_footer {
+    display: flex;
+    width: 594px;
+    height: 75px;
+    border-radius: 0px 0px 16px 16px;
+    background: #d3d3d3;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.del_checked {
+    border-radius: 4px;
+    background:#6C757D;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+}
+
+.del_all {
+    padding: 10px 16px;
+    border-radius: 4px;
+    background: #DC3545;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+}
+.onscreen {
+    display: block;
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
+    
+
+}
