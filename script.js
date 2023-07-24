@@ -7,6 +7,8 @@ const activ = document.querySelector(".active")
 const taskFooter = document.querySelector(".task_footer")
 
 
+
+
 form.addEventListener('submit', addTask) // событие + добавление задачи
 
 
@@ -15,13 +17,13 @@ form.addEventListener('submit', addTask) // событие + добавлени�
 function addTask(event) {
   event.preventDefault(); // отмена перезагрузки
 
-  const taskTxt = input.value; // получение текста инпута
+  const taskTxt = input.value.trim(); // получение текста инпута
 
   /* внутрянка задачи */
 
   const task = ` <li class="task_wrapper">
                         <input class="checkbox" type="checkbox">
-                        <p class="task_title">${taskTxt}</p>
+                        <span class="task_title">${taskTxt}</span>
                         <button class="del_task">❌</button>
                     </li> `;
 
@@ -68,13 +70,23 @@ function doneTask(event) {
 }
 
 taskFooter.addEventListener('click', deleteAll)
+taskFooter.addEventListener("click", deleteDone);
+
+
+/* Удаление всех задач */
 
 function deleteAll(event) {
   if (event.target.classList.contains("del_all")) {
-    const ulChildren = tasksList.querySelectorAll("li")
-    console.log(ulChildren);
-    
-    
+    tasksList.innerHTML = "";
     activ.classList.remove("onscreen");
   }
 } 
+
+/* удаление выполненых */
+
+function deleteDone(event) {
+  if (event.target.classList.contains("del_done")) {
+    const checked = tasksList.querySelectorAll(":checked")
+    console.log(checked)
+  }
+}

@@ -21,7 +21,8 @@ header {
 .toDo_wrapper {
     margin: 33px auto 0;
     width: 594px;
-
+    border-radius: 16px;
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
 }
 
 
@@ -31,12 +32,23 @@ header {
     width: 594px;
     height: 87px;
     background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 16px 16px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
 }
+.border{
+    border-radius: 16px 16px 0 0;
+}
+.line {
+    display: none;
+    height: 1px;
+    background: #DEE2E6;
+}
+.full{
+
+}
+
 .main_input {
     width: 356px;
     height: 38px;
@@ -63,25 +75,26 @@ header {
     align-items: center;
 }
 
-.addBtn:hover {
+.add-Btn:hover {
     background: #058229;
     transition: 250ms;
 }
 
 /* стили листа */
-.active {
-    margin: 0 auto;
-}
+
 .task_list {
+    display: flex;
+    flex-direction: column-reverse;
     background: #fff;
     width: 594px;
 }
 .task_list li:first-child{
-    padding-top: 32px;
-}
-.task_list li:last-child{
     padding-bottom: 32px;
     margin-bottom: 0;
+}
+.task_list li:last-child{
+    padding-top: 32px;
+    
 }
 .task_wrapper {
     display: flex;
@@ -99,8 +112,14 @@ header {
     border-radius: 2px;
     background: #7749f8;
 }
+.checkbox:checked ~ span{
+    text-decoration: line-through;
+    color: #54595E;
+}
+
 .task_title {
     display: block;
+    max-width: 450px;
 }
 .done_title {
     text-decoration: line-through;
@@ -110,14 +129,19 @@ header {
     display: block;
     margin-left: auto;
     font-size: 16px;
-    /* border: none; */
-    /* background: transparent; */
+    border: none;
+    background: transparent;
+}
+.del_task:hover {
+    transform:scale(120%);
+    transition: 250ms;
 }
 
 /* футер листа с кнопками */
 
-.active {
+.list_wrapper {
     display: none;
+
 }
 .task_footer {
     display: flex;
@@ -130,7 +154,7 @@ header {
     padding: 0 24px;
 }
 
-.del_checked {
+.del_done {
     border-radius: 4px;
     background:#6C757D;
     text-align: center;
@@ -139,6 +163,10 @@ header {
     color: #fff;
     padding: 10px 16px;
     border: none;
+}
+.del_done:hover {
+    background:#545c63;
+    transition: 250ms;
 }
 
 .del_all {
@@ -150,9 +178,15 @@ header {
     color: #fff;
     border: none;
 }
+.del_all:hover {
+    background: #b40618;
+    transition: 250ms;
+}
 .onscreen {
     display: block;
     box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
-    
+}
 
+.active {
+    display: block;
 }
